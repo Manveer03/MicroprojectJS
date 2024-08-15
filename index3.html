@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Famous Basketball Players</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>Basketball</h1>
+            <h2>Famous Players</h2>
+        </header>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Overview</a></li>
+                <li><a href="index2.html">Rules</a></li>
+                <li><a href="index3.html">Famous Players</a></li>
+            </ul>
+        </nav>
+        <main id="app" class="main-content">
+            <h1>{{ sport }}</h1>
+            <section class="card">
+                <div>
+                    <img :src="image" alt="Basketball Player" class="img-centre">
+                </div>
+                <p>{{ sport }} {{ description }}. Discover more about <a :href="url" target="_blank">{{ player }}</a>.</p>
+                <div class="product-status">
+                    <p v-if="inStock">Jersey Available</p>
+                    <p v-else>Jersey Out of Stock</p>
+                </div>
+            </section>
+            <section class="info">
+                <dl>
+                    <p>
+                        Basketball has produced some of the most iconic athletes in the history of sports. These players have not only dominated the game on the court but have also become global ambassadors for the sport, influencing millions of fans worldwide.
+                    </p>
+                    <p>
+                        One of the most legendary figures in basketball is Michael Jordan. Known for his scoring ability, defensive prowess, and competitive spirit, Jordan led the Chicago Bulls to six NBA championships in the 1990s and became a global icon through his endorsements and the popular "Air Jordan" brand.
+                    </p>
+                    <p>
+                        Another towering figure in basketball history is Kareem Abdul-Jabbar, the NBA's all-time leading scorer. With his signature skyhook shot, Abdul-Jabbar dominated the league for two decades, winning six NBA championships and earning numerous MVP awards.
+                    </p>
+                    <p>
+                        LeBron James, often considered one of the greatest players of all time, has had a profound impact on the game with his versatility, athleticism, and leadership. James has won multiple NBA championships and continues to break records while advocating for social justice and education through his foundation.
+                    </p>
+                    <p>
+                        The list of famous basketball players also includes Magic Johnson, Larry Bird, Shaquille O'Neal, Kobe Bryant, and many others who have left an indelible mark on the sport. These athletes are celebrated not just for their achievements but also for their contributions to the culture of basketball and their influence on future generations of players.
+                    </p>
+                    <dt>Exciting:</dt>
+                    <dd>Basketball is a fast-paced game that keeps players and fans on their toes.</dd>
+                    <dt>Global:</dt>
+                    <dd>Played all over the world, basketball is a sport that unites cultures.</dd>
+                    <dt>Teamwork:</dt>
+                    <dd>Success in basketball comes from strong teamwork and strategy.</dd>
+                </dl>
+            </section>
+        </main>
+        <footer>&copy; <span id="year"></span> - Famous Basketball Players</footer>
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="js/main3.js"></script>
+</body>
+</html>

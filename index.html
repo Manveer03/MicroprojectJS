@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Basketball Overview</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>Basketball</h1>
+            <h2>A Brief Overview</h2>
+        </header>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Overview</a></li>
+                <li><a href="index2.html">Rules</a></li>
+                <li><a href="index3.html">Famous Players</a></li>
+            </ul>
+        </nav>
+        <main id="app" class="main-content">
+            <h1>{{ sport }}</h1>
+            <section class="card">
+                <p>{{ description }}</p>
+            </section>
+            <section class="info">
+                <dl>
+                    <p>
+                        Basketball is a dynamic team sport played on a rectangular court where two teams, each consisting of five players, compete to score points by shooting a ball through the opponent's hoop. This fast-paced game is governed by a set of rules designed to ensure fair play and to showcase the skills and strategies of the players.
+                    </p>
+                    <p>
+                        Originating in the United States in the late 19th century, basketball has grown into a global phenomenon, captivating audiences with its combination of athleticism, strategy, and teamwork. Whether played on outdoor courts in neighborhood parks or in massive arenas in front of thousands of fans, basketball offers something for everyone.
+                    </p>
+                    <p>
+                        At its core, basketball is more than just a sport; it is a cultural force that transcends boundaries and brings people together. From professional leagues like the NBA to grassroots youth programs, basketball continues to inspire and unite players and fans around the world.
+                    </p>
+                    <dt>Exciting:</dt>
+                    <dd>Basketball is a fast-paced game that keeps players and fans on their toes.</dd>
+                    <dt>Global:</dt>
+                    <dd>Played all over the world, basketball is a sport that unites cultures.</dd>
+                    <dt>Teamwork:</dt>
+                    <dd>Success in basketball comes from strong teamwork and strategy.</dd>
+                </dl>
+            </section>
+            <!-- Add the Quiz Component Here -->
+            <quiz></quiz>
+            <!-- End Quiz Component -->
+        </main>
+        <footer>&copy; <span id="year"></span> - Basketball Overview</footer>
+    </div>
+
+    <script type="module">
+        import { createApp } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js';
+        import Quiz from './components/Quiz.vue';
+
+        const app = createApp({
+            data() {
+                return {
+                    sport: 'Basketball',
+                    description: 'Basketball is a sport played by two teams...'
+                };
+            }
+        });
+
+        app.component('quiz', Quiz);
+        app.mount('#app');
+    </script>
+</body>
+</html>

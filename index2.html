@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Basketball Rules</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>Basketball</h1>
+            <h2>The Rules</h2>
+        </header>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Overview</a></li>
+                <li><a href="index2.html">Rules</a></li>
+                <li><a href="index3.html">Famous Players</a></li>
+            </ul>
+        </nav>
+        <main id="app" class="main-content">
+            <h1>{{ sport }}</h1>
+            <section class="card">
+                <div>
+                    <img :src="image" alt="Basketball Court" class="img-centre">
+                </div>
+                <p>{{ sport }} {{ description }}. To learn more visit <a :href="url" target="_blank">NBA Official Rules</a>.</p>
+            </section>
+            <section class="info">
+                <dl>
+                    <p>
+                        Basketball rules govern the way the game is played, from how points are scored to the behavior expected of players. The rules of basketball ensure that the game is played fairly and that all players have an equal opportunity to compete. Understanding these rules is essential for players, coaches, and fans alike.
+                    </p>
+                    <p>
+                        The game starts with a tip-off, where the referee tosses the ball into the air, and the two centers from each team jump to gain possession. Teams move the ball down the court through dribbling, passing, and strategic plays to set up scoring opportunities.
+                    </p>
+                    <p>
+                        Scoring in basketball can occur in several ways: a field goal, which is worth two points, a three-point shot from beyond the three-point line, or a free throw, worth one point, awarded after a foul. The game is divided into quarters, and the team with the most points at the end of the game wins.
+                    </p>
+                    <p>
+                        Fouls are an integral part of the game, with penalties for actions such as illegal contact, unsportsmanlike conduct, and violations like traveling or double dribbling. Teams must be aware of the foul count, as accumulating too many can lead to player disqualification and free throws for the opposing team.
+                    </p>
+                    <p>
+                        The clock management and timeout strategy are crucial in basketball, especially in close games. Coaches use timeouts to regroup, strategize, and manage player fatigue, which can often be the difference between winning and losing.
+                    </p>
+                    <p>
+                        The rules of basketball, while complex, are designed to create a fast-paced, exciting game that rewards skill, strategy, and sportsmanship. Whether you're playing or watching, knowing the rules adds a deeper appreciation of the game.
+                    </p>
+                    <dt>Exciting:</dt>
+                    <dd>Basketball is a fast-paced game that keeps players and fans on their toes.</dd>
+                    <dt>Global:</dt>
+                    <dd>Played all over the world, basketball is a sport that unites cultures.</dd>
+                    <dt>Teamwork:</dt>
+                    <dd>Success in basketball comes from strong teamwork and strategy.</dd>
+                </dl>
+            </section>
+        </main>
+        <footer>&copy; <span id="year"></span> - Basketball Rules</footer>
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="js/main2.js"></script>
+</body>
+</html>
